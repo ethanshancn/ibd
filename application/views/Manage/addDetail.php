@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="/ibd/public/assets/bootstrap-datepicker-1.5.1/css/bootstrap-datepicker.min.css" />
 <div class="container">
     <div class="row" style="margin-top: 50px;">
         <p class="text-center"><h1><b style="font-size: 50px;">数据录入</b></h1></p>
@@ -29,31 +30,40 @@
                             <td><label class="control-label">年龄</label></td>
                             <td><input type="number" name="age" class="form-control"></td>
                             <td><label class="control-label">学历</label></td>
-                            <td><input type="eid" name="" class="form-control"></td>
+                            <td><select name="eid" class="form-control">
+                                    <?php foreach ($allEdu as $val):?>
+                                        <option value="<?=$val['eid']?>" <?php if($val['most_popular'] == 1) echo "selected";?>><?=$val['ename']?></option>
+                                    <?php endforeach;?>
+                                </select>
+                            </td>
                         </tr>
                         <tr>
                             <td><label class="control-label">婚姻</label></td>
-                            <td><input type="text" name="" class="form-control"></td>
+                            <td><select name="married" class="form-control">
+                                    <option value="0">未婚</option>
+                                    <option value="1" selected>已婚</option>
+                                </select>
+                            </td>
                             <td><label class="control-label">工作及单位</label></td>
-                            <td><input type="text" name="" class="form-control"></td>
+                            <td><input type="text" name="work" class="form-control"></td>
                         </tr>
                         <tr>
                             <td><label class="control-label">出生地</label></td>
-                            <td><input type="text" name="" class="form-control"></td>
+                            <td><input type="text" name="birth_place" class="form-control"></td>
                             <td><label class="control-label">现住址</label></td>
-                            <td><input type="text" name="" class="form-control"></td>
+                            <td><input type="text" name="now_home_place" class="form-control"></td>
                         </tr>
                         <tr>
                             <td><label class="control-label">身高</label></td>
-                            <td><input type="text" name="" class="form-control"></td>
+                            <td><input type="number" name="height" class="form-control"></td>
                             <td><label class="control-label">妊娠高危因素评分</label></td>
-                            <td><input type="text" name="" class="form-control"></td>
+                            <td><input type="number" name="pregnancy_risk" class="form-control"></td>
                         </tr>
                         <tr>
                             <td><label class="control-label">孕前体重</label></td>
-                            <td><input type="text" name="" class="form-control"></td>
+                            <td><input type="number" name="common_weight" class="form-control"></td>
                             <td><label class="control-label">产时体重</label></td>
-                            <td><input type="text" name="" class="form-control"></td>
+                            <td><input type="number" name="birth_weight" class="form-control"></td>
                         </tr>
                     </table>
                 </div>
@@ -61,47 +71,76 @@
                     <table class="table table-bordered table-hover table-striped">
                         <tr>
                             <td><label class="control-label">初次胎动时间</label></td>
-                            <td><input type="text" name="" class="form-control"></td>
+                            <td><input type="text" name="first_move" class="form-control datetimepicker"></td>
                         </tr>
                         <tr>
-                            <td><label class="control-label">早孕反应</label></td>
-                            <td><input type="text" name="" class="form-control"></td>
+                            <td><label class="control-label">早孕反应开始时间</label></td>
+                            <td><input type="text" name="morning_sick_beg" class="form-control datetimepicker"></td>
+                        </tr>
+                        <tr>
+                            <td><label class="control-label">早孕反应停止时间</label></td>
+                            <td><input type="text" name="morning_sick_end" class="form-control datetimepicker"></td>
                         </tr>
                         <tr>
                             <td><label class="control-label">是否阴道流血</label></td>
-                            <td><input type="text" name="" class="form-control"></td>
+                            <td>
+                                <select name="is_vaginal_blood" class="form-control">
+                                    <option value="0" selected>否</option>
+                                    <option value="1">是</option>
+                                </select>
+                            </td>
                         </tr>
                         <tr>
                             <td><label class="control-label">是否保胎治疗</label></td>
-                            <td><input type="text" name="" class="form-control"></td>
+                            <td>
+                                <select name="is_prevent_mis" class="form-control">
+                                    <option value="0" selected>否</option>
+                                    <option value="1">是</option>
+                                </select>
+                            </td>
                         </tr>
                         <tr>
                             <td><label class="control-label">是否补充叶酸</label></td>
-                            <td><input type="text" name="" class="form-control"></td>
+                            <td>
+                                <select name="is_folic" class="form-control">
+                                    <option value="0" selected>没有</option>
+                                    <option value="1">有</option>
+                                </select>
+                            </td>
                         </tr>
                         <tr>
                             <td><label class="control-label">是否补充维生素</label></td>
-                            <td><input type="text" name="" class="form-control"></td>
+                            <td>
+                                <select name="is_vitamin" class="form-control">
+                                    <option value="0" selected>没有</option>
+                                    <option value="1">有</option>
+                                </select>
+                            </td>
                         </tr>
                         <tr>
                             <td><label class="control-label">是否补充铁剂</label></td>
-                            <td><input type="text" name="" class="form-control"></td>
+                            <td>
+                                <select name="is_iron" class="form-control">
+                                    <option value="0" selected>没有</option>
+                                    <option value="1">有</option>
+                                </select>
+                            </td>
                         </tr>
                         <tr>
                             <td><label class="control-label">慎用药物暴露</label></td>
-                            <td><input type="text" name="" class="form-control"></td>
+                            <td><input type="text" name="careful_grug" class="form-control"></td>
                         </tr>
                         <tr>
                             <td><label class="control-label">病毒暴露</label></td>
-                            <td><input type="text" name="" class="form-control"></td>
+                            <td><input type="text" name="virus" class="form-control"></td>
                         </tr>
                         <tr>
                             <td><label class="control-label">射线暴露</label></td>
-                            <td><input type="text" name="" class="form-control"></td>
+                            <td><input type="text" name="ray" class="form-control"></td>
                         </tr>
                         <tr>
                             <td><label class="control-label">其他</label></td>
-                            <td><input type="text" name="" class="form-control"></td>
+                            <td><input type="text" name="other" class="form-control"></td>
                         </tr>
                     </table>
                 </div>
@@ -558,6 +597,7 @@
         </div>
     </div>
 </div>
+<script src="/ibd/public/assets/bootstrap-datepicker-1.5.1/js/bootstrap-datepicker.min.js"></script>
 <script src="/ibd/public/js/addDetail.js"></script>
 <script>
     addDetail.init();

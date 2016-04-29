@@ -4,7 +4,13 @@
 var addDetail = {
     init : function () {
         var _this = this;
+        
+        _this.bindAction();
+    },
 
-
+    bindAction : function () {
+        $('.datetimepicker').datepicker({
+            format: "yyyy-mm-dd"
+        })
     }
 }

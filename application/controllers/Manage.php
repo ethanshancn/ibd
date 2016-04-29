@@ -8,12 +8,13 @@ class Manage extends CI_Controller
 {
     public function addDetail()
     {
-        /*$this->load->model('user');
-        $allUser = $this->user->getAllUser();*/
+        $displayData = array();
+        $this->load->model('education');
+        $displayData['allEdu'] = $this->education->getAllEducation();
+
 
         $this->load->view('header');
-        //$this->load->view('Manage/addDetail',array('allUser'=>$allUser));
-        $this->load->view('Manage/addDetail');
+        $this->load->view('Manage/addDetail',$displayData);
         $this->load->view('footer');
     }
 

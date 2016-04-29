@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50617
 File Encoding         : 65001
 
-Date: 2016-04-29 08:34:10
+Date: 2016-04-29 21:19:37
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -22,22 +22,23 @@ DROP TABLE IF EXISTS `education`;
 CREATE TABLE `education` (
   `eid` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '学历ID',
   `ename` varchar(30) NOT NULL COMMENT '学历名称',
+  `most_popular` tinyint(3) unsigned zerofill NOT NULL COMMENT '最常见的教育水平，用来设置默认选择项',
   PRIMARY KEY (`eid`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COMMENT='学历表';
 
 -- ----------------------------
 -- Records of education
 -- ----------------------------
-INSERT INTO `education` VALUES ('1', '小学');
-INSERT INTO `education` VALUES ('2', '初中');
-INSERT INTO `education` VALUES ('3', '技工');
-INSERT INTO `education` VALUES ('4', '职业高中');
-INSERT INTO `education` VALUES ('5', '高中');
-INSERT INTO `education` VALUES ('6', '中专');
-INSERT INTO `education` VALUES ('7', '大专');
-INSERT INTO `education` VALUES ('8', '本科');
-INSERT INTO `education` VALUES ('9', '硕士');
-INSERT INTO `education` VALUES ('10', '博士');
+INSERT INTO `education` VALUES ('1', '小学', '000');
+INSERT INTO `education` VALUES ('2', '初中', '000');
+INSERT INTO `education` VALUES ('3', '技工', '000');
+INSERT INTO `education` VALUES ('4', '职业高中', '000');
+INSERT INTO `education` VALUES ('5', '高中', '001');
+INSERT INTO `education` VALUES ('6', '中专', '000');
+INSERT INTO `education` VALUES ('7', '大专', '000');
+INSERT INTO `education` VALUES ('8', '本科', '000');
+INSERT INTO `education` VALUES ('9', '硕士', '000');
+INSERT INTO `education` VALUES ('10', '博士', '000');
 
 -- ----------------------------
 -- Table structure for exam_blood
@@ -266,12 +267,12 @@ CREATE TABLE `gravida` (
   `eid` tinyint(4) NOT NULL DEFAULT '8' COMMENT '学历',
   `married` tinyint(4) NOT NULL DEFAULT '1' COMMENT '是否结婚 0：未婚；1：已婚',
   `work` varchar(255) DEFAULT NULL COMMENT '工作',
-  `work_place` varchar(255) DEFAULT NULL COMMENT '工作地点',
+  `work_place` varchar(255) DEFAULT NULL COMMENT '工作地点(暂时不用)',
   `birth_place` varchar(255) DEFAULT NULL COMMENT '出生地',
   `now_home_place` varchar(255) DEFAULT NULL COMMENT '现住址',
   `height` double DEFAULT NULL COMMENT '身高',
   `pregnancy_risk` double DEFAULT NULL COMMENT '妊娠高危因素评分',
-  `ommon_weight` double DEFAULT NULL COMMENT '孕前体重',
+  `common_weight` double DEFAULT NULL COMMENT '孕前体重',
   `birth_weight` double DEFAULT NULL COMMENT '产时体重',
   PRIMARY KEY (`gid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='孕妇基础信息表';
