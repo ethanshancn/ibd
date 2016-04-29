@@ -21,15 +21,15 @@
                         </tr>
                         <tr>
                             <td><label class="control-label">姓名</label></td>
-                            <td><input type="text" name="" class="form-control"></td>
+                            <td><input type="text" name="name" class="form-control"></td>
                             <td><label class="control-label">民族</label></td>
-                            <td><input type="text" name="" class="form-control"></td>
+                            <td><input type="text" name="nation" class="form-control" value="汉"></td>
                         </tr>
                         <tr>
                             <td><label class="control-label">年龄</label></td>
-                            <td><input type="text" name="" class="form-control"></td>
+                            <td><input type="number" name="age" class="form-control"></td>
                             <td><label class="control-label">学历</label></td>
-                            <td><input type="text" name="" class="form-control"></td>
+                            <td><input type="eid" name="" class="form-control"></td>
                         </tr>
                         <tr>
                             <td><label class="control-label">婚姻</label></td>
