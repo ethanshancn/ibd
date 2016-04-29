@@ -8,11 +8,9 @@ class Login extends CI_Controller
 {
     public function index()
     {
-        $this->load->model('user');
-        $allUser = $this->user->getAllUser();
-
+        
         $this->load->view('header');
-        $this->load->view('Login/login',array('allUser'=>$allUser));
+        $this->load->view('Login/login');
         $this->load->view('footer');
     }
 }
