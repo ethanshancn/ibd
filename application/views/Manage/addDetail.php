@@ -147,7 +147,11 @@
                 <div class="table">
                     <table class="table table-bordered table-hover table-striped">
                         <tr>
-                            <td><label class="control-label">慢性病史</label></td>
+                            <td>
+                                <label class="control-label">慢性病史</label>
+                                &nbsp;
+                                <a class="btn btn-danger btn-xs glyphicon glyphicon-plus" role="button"></a>
+                            </td>
                             <td><input type="text" name="" class="form-control"></td>
                         </tr>
                         <tr>
