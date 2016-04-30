@@ -9,8 +9,18 @@ var addDetail = {
     },
 
     bindAction : function () {
+        var _this = this;
         $('.datetimepicker').datepicker({
             format: "yyyy-mm-dd"
-        })
+        });
+        $(".add_input_control").click(function(){
+            _this.addInputControl($(this));
+        });
+    },
+
+    //增加input输入框
+    addInputControl : function(obj){
+        obj.parent().attr("rowspan",parseInt(obj.parent().attr("rowspan"))+1);
+        obj.parent().parent().after('<tr><td><input type="text" name="'+obj.parent().next().find("input").attr("name")+'" class="form-control"></td></tr>');
     }
 }

@@ -147,28 +147,36 @@
                 <div class="table">
                     <table class="table table-bordered table-hover table-striped">
                         <tr>
-                            <td>
+                            <td rowspan="1">
                                 <label class="control-label">慢性病史</label>
                                 &nbsp;
-                                <a class="btn btn-danger btn-xs glyphicon glyphicon-plus" role="button"></a>
+                                <a class="btn btn-danger btn-xs glyphicon glyphicon-plus add_input_control" role="button"></a>
                             </td>
-                            <td><input type="text" name="" class="form-control"></td>
+                            <td><input type="text" name="pass_ill_type_1" class="form-control"></td>
                         </tr>
                         <tr>
-                            <td><label class="control-label">传染病史</label></td>
-                            <td><input type="text" name="" class="form-control"></td>
+                            <td rowspan="1"><label class="control-label">传染病史</label>
+                                &nbsp;
+                                <a class="btn btn-danger btn-xs glyphicon glyphicon-plus add_input_control" role="button"></a></td>
+                            <td><input type="text" name="pass_ill_type_2" class="form-control"></td>
                         </tr>
                         <tr>
-                            <td><label class="control-label">重大外伤史</label></td>
-                            <td><input type="text" name="" class="form-control"></td>
+                            <td rowspan="1"><label class="control-label">重大外伤史</label>
+                                &nbsp;
+                                <a class="btn btn-danger btn-xs glyphicon glyphicon-plus add_input_control" role="button"></a></td>
+                            <td><input type="text" name="pass_ill_type_3" class="form-control"></td>
                         </tr>
                         <tr>
-                            <td><label class="control-label">手术史</label></td>
-                            <td><input type="text" name="" class="form-control"></td>
+                            <td rowspan="1"><label class="control-label">手术史</label>
+                                &nbsp;
+                                <a class="btn btn-danger btn-xs glyphicon glyphicon-plus add_input_control" role="button"></a></td>
+                            <td><input type="text" name="pass_ill_type_4" class="form-control"></td>
                         </tr>
                         <tr>
-                            <td><label class="control-label">输血史</label></td>
-                            <td><input type="text" name="" class="form-control"></td>
+                            <td rowspan="1"><label class="control-label">输血史</label>
+                                &nbsp;
+                                <a class="btn btn-danger btn-xs glyphicon glyphicon-plus add_input_control" role="button"></a></td>
+                            <td><input type="text" name="pass_ill_type_5" class="form-control"></td>
                         </tr>
                     </table>
                 </div>
@@ -176,19 +184,38 @@
                     <table class="table table-bordered table-hover table-striped">
                         <tr>
                             <td><label class="control-label">吸烟史</label></td>
-                            <td><input type="text" name="" class="form-control"></td>
+                            <td>
+                                <select name="is_smoking" class="form-control">
+                                    <option value="0" selected>没有</option>
+                                    <option value="1">有</option>
+                                </select>
+                            </td>
                         </tr>
                         <tr>
                             <td><label class="control-label">饮酒史</label></td>
-                            <td><input type="text" name="" class="form-control"></td>
+                            <td>
+                                <select name="is_drinking" class="form-control">
+                                    <option value="0" selected>没有</option>
+                                    <option value="1">有</option>
+                                </select></td>
                         </tr>
                         <tr>
                             <td><label class="control-label">疫水、疫区接触史</label></td>
-                            <td><input type="text" name="" class="form-control"></td>
+                            <td>
+                                <select name="is_infected" class="form-control">
+                                    <option value="0" selected>没有</option>
+                                    <option value="1">有</option>
+                                </select>
+                            </td>
                         </tr>
                         <tr>
                             <td><label class="control-label">冶游史</label></td>
-                            <td><input type="text" name="" class="form-control"></td>
+                            <td>
+                                <select name="is_lustful" class="form-control">
+                                    <option value="0" selected>没有</option>
+                                    <option value="1">有</option>
+                                </select>
+                            </td>
                         </tr>
                     </table>
                 </div>
@@ -196,51 +223,81 @@
                     <table class="table table-bordered table-hover table-striped">
                         <tr>
                             <td><label class="control-label">初潮年龄</label></td>
-                            <td><input type="text" name="" class="form-control"></td>
+                            <td><input type="number" name="menarche_age" class="form-control"></td>
                         </tr>
                         <tr>
                             <td><label class="control-label">经期</label></td>
-                            <td><input type="text" name="" class="form-control"></td>
+                            <td><input type="number" name="menstrual" class="form-control"></td>
                         </tr>
                         <tr>
                             <td><label class="control-label">周期</label></td>
-                            <td><input type="text" name="" class="form-control"></td>
+                            <td><input type="number" name="period" class="form-control"></td>
                         </tr>
                         <tr>
                             <td><label class="control-label">末次月经时间</label></td>
-                            <td><input type="text" name="" class="form-control"></td>
+                            <td><input type="text" name="last_mens" class="form-control datetimepicker"></td>
                         </tr>
                         <tr>
                             <td><label class="control-label">月经量</label></td>
-                            <td><input type="text" name="" class="form-control"></td>
+                            <td><input type="number" name="mens_volume" class="form-control"></td>
                         </tr>
                         <tr>
                             <td><label class="control-label">痛经史</label></td>
-                            <td><input type="text" name="" class="form-control"></td>
+                            <td>
+                                <select name="is_dys" class="form-control">
+                                    <option value="0" selected>没有</option>
+                                    <option value="1">有</option>
+                                </select>
+                            </td>
                         </tr>
                         <tr>
-                            <td><label class="control-label">白带</label></td>
-                            <td><input type="text" name="" class="form-control"></td>
+                            <td><label class="control-label">白带(是否正常?)</label></td>
+                            <td>
+                                <select name="is_whites_abnormal" class="form-control">
+                                    <option value="0" selected>正常</option>
+                                    <option value="1">异常</option>
+                                </select>
+                            </td>
                         </tr>
                     </table>
                 </div>
                 <div class="table">
                     <table class="table table-bordered table-hover table-striped">
                         <tr>
-                            <td><label class="control-label">足月产</label></td>
+                            <td rowspan="1"><label class="control-label">足月产</label></td>
+                            <td><label class="control-label">时间</label></td>
+                            <td><input type="text" name="" class="form-control"></td>
+                            <td><label class="control-label">地点</label></td>
+                            <td><input type="text" name="" class="form-control"></td>
+                            <td><label class="control-label">性别</label></td>
+                            <td><input type="text" name="" class="form-control"></td>
+                            <td><label class="control-label">出身体重</label></td>
+                            <td><input type="text" name="" class="form-control"></td>
+                        </tr>
+
+                        <tr>
+                            <td rowspan="1"><label class="control-label">早产</label></td>
+                            <td><label class="control-label">时间</label></td>
+                            <td><input type="text" name="" class="form-control"></td>
+                            <td><label class="control-label">地点</label></td>
+                            <td><input type="text" name="" class="form-control"></td>
+                            <td><label class="control-label">性别</label></td>
+                            <td><input type="text" name="" class="form-control"></td>
+                            <td><label class="control-label">出身体重</label></td>
                             <td><input type="text" name="" class="form-control"></td>
                         </tr>
                         <tr>
-                            <td><label class="control-label">早产</label></td>
+                            <td rowspan="1"><label class="control-label">流产</label></td>
+                            <td><label class="control-label">时间</label></td>
                             <td><input type="text" name="" class="form-control"></td>
+                            <td><label class="control-label">地点</label></td>
+                            <td><input type="text" name="" class="form-control"></td>
+                            <td><label class="control-label">是否清宫</label></td>
+                            <td colspan="3"><input type="text" name="" class="form-control"></td>
                         </tr>
                         <tr>
-                            <td><label class="control-label">流产</label></td>
-                            <td><input type="text" name="" class="form-control"></td>
-                        </tr>
-                        <tr>
-                            <td><label class="control-label">夭折</label></td>
-                            <td><input type="text" name="" class="form-control"></td>
+                            <td rowspan="1"><label class="control-label">夭折</label></td>
+                            <td colspan="8"><input type="text" name="" class="form-control"></td>
                         </tr>
                     </table>
                 </div>
