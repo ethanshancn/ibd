@@ -264,40 +264,63 @@
                 <div class="table">
                     <table class="table table-bordered table-hover table-striped">
                         <tr>
-                            <td rowspan="1"><label class="control-label">足月产</label></td>
+                            <td rowspan="1"><label class="control-label">足月产</label>
+                                &nbsp;
+                                <a class="btn btn-danger btn-xs glyphicon glyphicon-plus add_input_control" role="button"></a></td>
                             <td><label class="control-label">时间</label></td>
-                            <td><input type="text" name="" class="form-control"></td>
+                            <td><input type="text" name="history_birth_time_type_1" class="form-control"></td>
                             <td><label class="control-label">地点</label></td>
-                            <td><input type="text" name="" class="form-control"></td>
+                            <td><input type="text" name="history_birth_place_type_1" class="form-control"></td>
                             <td><label class="control-label">性别</label></td>
-                            <td><input type="text" name="" class="form-control"></td>
+                            <td>
+                                <select name="history_birth_sex_type_1" class="form-control">
+                                    <option value="0" selected>女</option>
+                                    <option value="1">男</option>
+                                </select>
+                            </td>
                             <td><label class="control-label">出身体重</label></td>
-                            <td><input type="text" name="" class="form-control"></td>
+                            <td><input type="text" name="history_birth_birth_weight_type_1" class="form-control"></td>
                         </tr>
 
                         <tr>
-                            <td rowspan="1"><label class="control-label">早产</label></td>
+                            <td rowspan="1"><label class="control-label">早产</label>
+                                &nbsp;
+                                <a class="btn btn-danger btn-xs glyphicon glyphicon-plus add_input_control" role="button"></a></td>
                             <td><label class="control-label">时间</label></td>
-                            <td><input type="text" name="" class="form-control"></td>
+                            <td><input type="text" name="history_birth_time_type_2" class="form-control"></td>
                             <td><label class="control-label">地点</label></td>
-                            <td><input type="text" name="" class="form-control"></td>
+                            <td><input type="text" name="history_birth_place_type_2" class="form-control"></td>
                             <td><label class="control-label">性别</label></td>
-                            <td><input type="text" name="" class="form-control"></td>
+                            <td>
+                                <select name="history_birth_sex_type_2" class="form-control">
+                                    <option value="0" selected>女</option>
+                                    <option value="1">男</option>
+                                </select>
+                            </td>
                             <td><label class="control-label">出身体重</label></td>
-                            <td><input type="text" name="" class="form-control"></td>
+                            <td><input type="text" name="history_birth_birth_weight_type_2" class="form-control"></td>
                         </tr>
                         <tr>
-                            <td rowspan="1"><label class="control-label">流产</label></td>
+                            <td rowspan="1"><label class="control-label">流产</label>
+                                &nbsp;
+                                <a class="btn btn-danger btn-xs glyphicon glyphicon-plus add_input_control" role="button"></a></td>
                             <td><label class="control-label">时间</label></td>
-                            <td><input type="text" name="" class="form-control"></td>
+                            <td><input type="text" name="history_birth_time_type_3" class="form-control"></td>
                             <td><label class="control-label">地点</label></td>
-                            <td><input type="text" name="" class="form-control"></td>
+                            <td><input type="text" name="history_birth_time_type_3" class="form-control"></td>
                             <td><label class="control-label">是否清宫</label></td>
-                            <td colspan="3"><input type="text" name="" class="form-control"></td>
+                            <td colspan="3">
+                                <select name="history_birth_is_clean_uterus_type_3" class="form-control">
+                                    <option value="1" selected>是</option>
+                                    <option value="0">否</option>
+                                </select>
+                            </td>
                         </tr>
                         <tr>
-                            <td rowspan="1"><label class="control-label">夭折</label></td>
-                            <td colspan="8"><input type="text" name="" class="form-control"></td>
+                            <td rowspan="1"><label class="control-label">夭折</label>
+                                &nbsp;
+                                <a class="btn btn-danger btn-xs glyphicon glyphicon-plus add_input_control" role="button"></a></td>
+                            <td colspan="8"><input type="text" name="history_birth_other_inf_type_4" class="form-control"></td>
                         </tr>
                     </table>
                 </div>

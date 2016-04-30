@@ -21,6 +21,13 @@ var addDetail = {
     //增加input输入框
     addInputControl : function(obj){
         obj.parent().attr("rowspan",parseInt(obj.parent().attr("rowspan"))+1);
-        obj.parent().parent().after('<tr><td><input type="text" name="'+obj.parent().next().find("input").attr("name")+'" class="form-control"></td></tr>');
-    }
+        var nextAll = obj.parent().nextAll();
+        var str = '';
+        for(var i = 0; i < nextAll.length; i ++)
+        {
+            str += nextAll[i].outerHTML;
+        }
+        obj.parent().parent().after('<tr>'+str+'</tr>');
+    },
+
 }
